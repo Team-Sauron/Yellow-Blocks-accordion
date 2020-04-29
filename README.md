@@ -1,0 +1,1 @@
+# smego-accordion
