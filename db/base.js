@@ -1,4 +1,4 @@
-const faker = require('faker')
+const faker = require('faker');
 
 
 
@@ -9,8 +9,8 @@ var ranWord = faker.lorem.word()
 var ranNumber = faker.random.number()
 
 var s3 = 0;
-
-
+console.log(ranParagraph)
+/*
 //arrays of imges(45urls):
     var arrimg1 = ['https://cdn.pixabay.com/photo/2016/08/26/22/28/iron-gate-1623303_960_720.jpg', 'https://cdn.pixabay.com/photo/2016/10/13/13/59/bananas-1737836_960_720.jpg', 'https://cdn.pixabay.com/photo/2016/05/09/11/09/tennis-1381230_960_720.jpg', 'https://cdn.pixabay.com/photo/2018/12/12/20/14/the-old-breakwater-3871577_960_720.jpg', 'https://cdn.pixabay.com/photo/2020/04/10/05/54/odd-job-5024178_960_720.jpg'];
     var arrimg2 = ['https://cdn.pixabay.com/photo/2016/08/26/22/28/iron-gate-1623303_960_720.jpg', 'https://cdn.pixabay.com/photo/2016/10/13/13/59/bananas-1737836_960_720.jpg', 'https://cdn.pixabay.com/photo/2016/05/09/11/09/tennis-1381230_960_720.jpg', 'https://cdn.pixabay.com/photo/2018/12/12/20/14/the-old-breakwater-3871577_960_720.jpg', 'https://cdn.pixabay.com/photo/2020/04/10/05/54/odd-job-5024178_960_720.jpg'];
@@ -32,64 +32,8 @@ var s3 = 0;
 //data gen for features:
 
 var featfunc = function() {
-    var allFeatures= [];
     var features = {
-        'topimage': {'imgurl': '','description':''},
-        'phraseVideo': {'phrase':'', 'vidurl':''},
-        'middleFeatures': {'title':'','subtitles':'', 'description':''},
-        'bottomimg': {'imgurl':'','desTitle':'','description':''},
-        'bottomvideo': ''
-    }
-
-    var countimg =0;
-
-    //count to go through 1 array
-    for(var j = 0; j < 5; j++){
-            //look through all keys for img requirements
-            var lookForkeys = function(obj) {
-            
-                for (var keys in obj){
-                    if(typeof obj[keys] === 'object') {
-                        lookForkeys(obj[keys])
-                    } else {
-                        if (keys === imgurl) {
-                            countimg++
-                            features[keys] = imgurl[countimg][j] //arrimg1 , 2, 3 ?
-                        console.log("array url ",imgurl[countimg][j])
-                        }
-                        if (keys === vidurl) {
-                            features[keys] = vidurl[1][j]
-                        }
-                    }
-                    }
-
-                    countimg = 0
-                }
-            allFeatures.push(features)
-            }
-    lookForkeys(features)
-    return allFeatures   
-}
-
-/*
-                for (var keys in features){
-                for (var key in keys)
-                if (key === imgurl && countimg < 2) {
-                    countimg ++
-                    features[keys] = imgurl[i][j] //arrimg1 , 2, 3 ?
-                }
-                if (key === vidurl) {
-                    features[keys] = vidurl[1][j] //arrimg1 , 2, 3 ?
-                }
-            }
-
-        }
-        j++
-    }
-
-return (features)
-}
-*/
+   
 console.log(featfunc())
 
 /*
@@ -106,6 +50,7 @@ console.log(featfunc())
         'middleFeatures': {   'title': ranSentence(),
                             'subtitles': ranWords(),
                             'description': ranSentence 
+                            imag * 6
                     },
 
         'bottomimg': {'img': arrimg2[i],
@@ -153,4 +98,6 @@ console.log(featfunc())
                                 }
 
 */
+
+
 
