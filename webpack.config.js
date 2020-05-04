@@ -2,17 +2,17 @@ const path = require('path');
 
 module.exports = {
     mode: 'development',
-    entry: "./client/components/accordion.jsx",
+    entry: "./client/accordion.js",
 
     output: {
-        filename: BeforeUnloadEvent.js,
+        filename: "bundle.js",
         path: path.join(__dirname, 'public'),
     },
 
     module: {
         rules: [{
             test: /\.jsx?$/,
-            exclude: /(node_modelues)/,
+            exclude: /(node_modules)/,
             use: {
                 loader: "babel-loader",
                 options: {

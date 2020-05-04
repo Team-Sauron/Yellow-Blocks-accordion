@@ -4,7 +4,10 @@
   "description": "Smego",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon server",
+    "build": "webpack --config webpack.config.js",
+    "react-dev": "webpack -d --watch",
+    "seed": "node ./data/db/base.js"
   },
   "repository": {
     "type": "git",
@@ -22,12 +25,18 @@
     "babel-loader": "^8.1.0",
     "babel-watch": "^7.0.0",
     "webpack": "^4.43.0",
-    "webpack-cli": "^3.3.11"
+    "webpack-cli": "^3.3.11",
+    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor"
   },
   "dependencies": {
+    "@babel/preset-react": "^7.9.4",
+    "aws-s3": "^2.0.5",
     "axios": "^0.19.2",
     "express": "^4.17.1",
+    "faker": "^4.1.0",
     "jquery": "^3.5.0",
+    "mongo": "^0.1.0",
+    "mongoose": "^5.9.10",
     "nodemon": "^2.0.3",
     "path": "^0.12.7",
     "react": "^16.13.1",
