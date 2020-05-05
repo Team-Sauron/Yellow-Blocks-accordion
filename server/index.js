@@ -9,6 +9,12 @@ const db = require('../data/db/accordion');
 accordion.use(express.static(path.join(__dirname, '../public')));
 accordion.use(express.json());
 
+//for testing purposes
+accordion.get('/', async (req, res) => {
+   res.send('pass!')
+});
+//
+
 accordion.get('/api/accordion/:id',function (req,res) {
    var id = req.params;
     
