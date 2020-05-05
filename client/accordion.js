@@ -1,7 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ReactPlayer from'react-player';
+import styled from 'styled-components';
 
+/*const Header = styled.h1`
+    font-family: Chilanka;
+    `*/
+/*const Sections = styled.div`
+        display: grid | inline-grid;
+    
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    `
+*/
 class Accordion extends React.Component {
     constructor(props) {
         super(props)
@@ -10,25 +21,32 @@ class Accordion extends React.Component {
             video: 'https://youtu.be/c3pM_CkPME4'
         }
     }
-
-
-
-
+    
+     
+   
 
 
 
     render () {
         return (
+            <>
+            <h1>
+                Features
+            </h1>
            
-            <div>
-                <h1>Features</h1>
-                <div>Title1</div>
-                <img src={this.state.features}/>
+            <div className="sections">
+                <div className="item-a">Title1</div>
+                <div>
+                <img className="item-b" src={this.state.features}/>
+                </div>
                 <div>Title2</div>
+                <div>
                 <ReactPlayer url={this.state.video}/>
+                </div>
+
             
             </div>
-        
+        </>
         
         
         
