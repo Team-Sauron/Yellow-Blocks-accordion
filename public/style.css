@@ -2,23 +2,145 @@
 h1{ 
     font-family: chilanka;
 }
+ 
+
 .sections{
     display: grid;
-
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    justify-items: center;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    /*grid-template-areas: 
+    ". h t ."
+    ". d v .";*/
+    
 }
 
-.item-a{
-    grid-column-start: 2;
-    grid-column-end: five;
-    grid-row-start: row1-start;
-    grid-row-end: 3;
+.image1 {
+   /* grid-column: h ;*/
+    grid-column: 2/ span2;
+    grid-row: 1;  
+    object-fit: cover;
+   
+
 }
 
-.item-b{
-    grid-column-start: 1;
-    grid-column-end: span col4-start;
-    grid-row-start: 2;
-    grid-row-end: span 2;
+.title {
+    grid-column: 3;
+    grid-row: 1;
+    /*grid-area: t;*/
+    align-self: center;
+    text-align: right;
+    color: blue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-right: 80px;
 }
+
+
+@media screen and (min-width: 1201px) {
+    .title {
+    font-size: 2.5rem;
+    line-height: 2.3125rem
+    }
+    #subtitle {
+        font-size: 1.5rem;
+        line-height: 2.3125rem
+    }
+}
+
+@media screen and (min-width: 901px) {
+    .title {
+    font-size: 1.5rem;
+    line-height: 2.3125rem
+    }
+    #subtitle {
+        font-size: 1.25rem;
+        line-height: 2.3125rem
+    }
+}
+
+@media screen and (min-width: 601px) {
+    .title {
+    font-size: 1.25rem;
+    line-height: 2.3125rem
+    }
+    #subtitle {
+        font-size: 1rem;
+        line-height: 2.3125rem
+    }
+}
+
+.des {
+    /*grid-area: d;*/
+    grid-row: 2;
+    grid-column: 2;
+    background-color: black;
+    color: greenyellow;
+}
+
+.video1 {
+    /*grid-area: v;*/
+    grid-row: 2;
+    grid-column: 3;
+}
+
+/*
+
+
+.sections {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    
+}
+
+.image1 {
+    position: relative;
+    height: ;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.title {
+    text-align: right;
+    justify-content: right;
+    color: greenyellow;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: absolute;
+    right: 100px;
+    width:50%;
+}
+
+@media screen and (min-width: 1201px) {
+    .title {
+    font-size: 2.5rem;
+    line-height: 2.3125rem
+    }
+    #subtitle {
+        font-size: 1.5rem;
+        line-height: 2.3125rem
+    }
+}
+
+@media screen and (min-width: 901px) {
+    .title {
+    font-size: 1.5rem;
+    line-height: 2.3125rem
+    }
+    #subtitle {
+        font-size: 1.25rem;
+        line-height: 2.3125rem
+    }
+}
+
+@media screen and (min-width: 601px) {
+    .title {
+    font-size: 1.25rem;
+    line-height: 2.3125rem
+    }
+    #subtitle {
+        font-size: 1rem;
+        line-height: 2.3125rem
+    }
+}
+*/
