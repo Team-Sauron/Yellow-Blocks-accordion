@@ -59,6 +59,15 @@ const Features = ({ft}) => {
                     </div>
 
             </div>
+            <div className="bottomSection">
+                <div className="image2" style={{'background-image': `url(${ft.img8})`}}>
+                    <div className="t4">
+                        <div>{ft.t4}</div>
+                         <div className="sub8">{ft.sub8}</div>
+                    </div>
+                </div>
+                <div className="v2"><ReactPlayer width={'auto'} height={'300px'} url={ft.vid2}/></div>
+            </div>
           </>
 
      );

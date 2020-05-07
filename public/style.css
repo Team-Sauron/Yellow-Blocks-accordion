@@ -155,3 +155,31 @@
     padding-bottom: 80px;
     
 }
+
+.bottomSection {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 69%;
+}
+
+.image2 {
+    width: 100%;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+}
+
+.t4 {
+    text-align: right;
+    color: white;
+    font-size: 35px;
+    margin-top: 50px;
+    padding: 80px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.v2 {
+    height: 150px !important;
+    width: 100% !important;
+}
