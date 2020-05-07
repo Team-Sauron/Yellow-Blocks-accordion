@@ -1,10 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import ReactPlayer from'react-player';
 import styled from 'styled-components';
 import axios from 'axios';
-import $ from 'jquery';
-import Features from './components/features.jsx'
+import Features from './components/features.jsx';
+import Build from './components/buildinstructions.jsx'
 
 /*const Header = styled.h1`
     font-family: Chilanka;
@@ -46,7 +45,7 @@ componentDidMount() {
             <>
             <div>
                 < Features ft={this.state.features}/>
-            
+                < Build ft={this.state.features}/>
             </div>
           </>
         );

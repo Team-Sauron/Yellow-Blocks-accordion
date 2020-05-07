@@ -2,7 +2,7 @@ import React from 'react';
 import ReactPlayer from'react-player';
 
 const Features = ({ft}) => {
-       console.log(ft)
+       
      return (   
         <>
         <div className="header">Features</div>
