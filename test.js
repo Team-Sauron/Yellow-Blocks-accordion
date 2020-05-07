@@ -5,9 +5,10 @@ const request = supertest(accordion)
 
 
 describe('GET/Request', () => {
-    test('Should get a response from a get request', async() => {
+    test('Should get a response from a get request', async(done) => {
        const response = await request.get('/');
         expect(response.text).toBe('pass!');
+        done();
     });
     
 });
