@@ -66,7 +66,7 @@ const Features = ({ft}) => {
                          <div className="sub8">{ft.sub8}</div>
                     </div>
                 </div>
-                <div className="v2"><ReactPlayer width={'auto'} height={'300px'} url={ft.vid2}/></div>
+                <div className="v2"><ReactPlayer width={'auto'} height={'400px'} url={ft.vid2}/></div>
             </div>
 
         </div>

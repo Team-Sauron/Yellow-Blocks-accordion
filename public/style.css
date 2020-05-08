@@ -181,25 +181,139 @@
 }
 
 .v2 {
-    height: 150px !important;
+    height: 400px !important;
     width: 100% !important;
+    padding-bottom: 50px;
 }
 
 .button {
-    
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 100%;
     border-left: 0px;
     border-right: 0px;
     border-bottom: 0px;
     border-width: 0.5px;
     border-color: rgb(201, 201, 201);
     background-color: white;
+}
+
+.features {
     font-family: 'Poppins', sans-serif;
     font-size: 20px;
     padding-top: 20px;
-    width: 100%;
     padding-bottom: 20px;
+    width: 100%;
     text-align: left;
     text-indent: 15%;
+}
 
+#symbol {
+    
+    float: right;
+    padding-right: 15%;
+    
+}
+
+.t5 {
+    font-family: 'Poppins', sans-serif;
+    text-align: left;
+    font-weight: bold;
+    font-size:25px;
+    padding-top: 20px;
+    text-indent: 25%;
+}
+
+#show {
+    font-size: 15px;
+    font-weight: normal;
+    border-top: 3px solid rgb(201, 201, 201);
+    padding-top: 20px; 
+}
+
+.only-border{
+    border: 3px solid rgb(224, 224, 224);
+    width: 50%;
+    margin: auto
+}
+
+.top-section {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 99%;
+    padding-top: 15px;
+    padding-left: 10px;
+    background-color: #ebebeb;
+
+}
+
+.img9 {
+   box-shadow: 1px 1px 5px grey; 
+   height: 100px
+}
+
+.infosec {
+    width: 50%;;
+    padding-left: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+
+.sub9 {
+    color: grey;
+    font-size: smaller;
+    
+}
+
+.launch {
+    padding-top: 15px;
+    font-size: smaller;
+    font-weight: bold;
+
+}
+
+.year {
+    font-weight: normal;
+    font-size: smaller;
+}
+
+.select {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-indent: 1%;
+}
+
+.middle-section {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    width: 99%;
+    justify-content: center;
+}
+
+.item {
+    width :20%
+}
+
+.img-item {
+    width: 95%;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-size:100% 100%;
+}
+
+.des-item {
+    font-family: 'Poppins', sans-serif;
+    color: grey;
+    text-align: center;
+    font-size: 15px;
+    width: 80%;
+    padding-bottom: 15px;
+    
     
 }
