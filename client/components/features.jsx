@@ -5,8 +5,8 @@ const Features = ({ft}) => {
 
      return (
         <>
-        <div className="header">Features</div>
-            <div className="section1">
+        <div>
+                <div className="section1">
                 <div className="image1" style={{'background-image': `url(${ft.img1})`}}>
                     <div className="t1">
                         <div>{ft.t1}</div>
@@ -68,6 +68,9 @@ const Features = ({ft}) => {
                 </div>
                 <div className="v2"><ReactPlayer width={'auto'} height={'300px'} url={ft.vid2}/></div>
             </div>
+
+        </div>
+
           </>
 
      );

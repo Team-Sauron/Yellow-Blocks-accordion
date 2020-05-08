@@ -19,11 +19,13 @@ class Accordion extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            features: []
-        }
+            features: [],
+            isOpen: false
+        };
+       
     }
 
-componentDidMount() {
+    componentDidMount() {
     const loc = window.location.href
     const id = loc.slice(-1)
    
@@ -37,14 +39,37 @@ componentDidMount() {
             console.log("AXIOS ERROR ",error);
           })
           .finally(function () {});
-}
+    }
+
+    handleClick() {
+        this.setState(state=> ({
+            isOpen: !state.isOpen
+        }));
+    }
     
     render () {
-        console.log("STATE ",this.state.features)
+       
         return (
             <>
             <div>
-                < Features ft={this.state.features}/>
+                {!this.state.isOpen && (
+                    <div>
+                        <div className="ftOpen">Features
+                        <button onClick={this.handleClick.bind(this)}>X</button>
+                        </div>
+                    </div>
+                )}
+
+                {this.state.isOpen && (
+                    <div>
+                        <div className="ftOpen">Features
+                        <button onClick={this.handleClick.bind(this)}>X</button>
+                        </div>
+                        < Features ft={this.state.features}/>
+                    </div>
+                )}
+                
+
                 < Build ft={this.state.features}/>
             </div>
           </>
