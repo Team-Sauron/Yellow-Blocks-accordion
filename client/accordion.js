@@ -5,25 +5,20 @@ import axios from 'axios';
 import Features from './components/features.jsx';
 import Build from './components/buildinstructions.jsx'
 
-/*const Header = styled.h1`
-    font-family: Chilanka;
-    `*/
-/*const Sections = styled.div`
-        display: grid | inline-grid;
-    
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-    `
-*/
+
 class Accordion extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            features: []
-        }
+            features: [],
+            ftIsOpen: false,
+            bIsOpen: false,
+            dIsOpen : false,
+        };
+       
     }
 
-componentDidMount() {
+    componentDidMount() {
     const loc = window.location.href
     const id = loc.slice(-1)
    
@@ -37,16 +32,103 @@ componentDidMount() {
             console.log("AXIOS ERROR ",error);
           })
           .finally(function () {});
-}
+    }
+
+    handleClick() {
+        this.setState(state=> ({
+            ftIsOpen: !state.ftIsOpen
+        }));
+    }
+
+    handleClickb() {
+        this.setState(state=> ({
+            bIsOpen: !state.bIsOpen
+        }));
+    }
+
+    handleClickd() {
+        this.setState(state=> ({
+            dIsOpen: !state.dIsOpen
+        }));
+    }
     
     render () {
-        console.log("STATE ",this.state.features)
+       
         return (
             <>
             <div>
-                < Features ft={this.state.features}/>
-                < Build ft={this.state.features}/>
+                {!this.state.ftIsOpen && (
+                    <div>
+                        <div className="ftOpen">
+                        <button className="button" onClick={this.handleClick.bind(this)}>
+                            <div className='features'>Features<div id='symbol'>+</div>
+                            </div>
+                            </button>
+                        </div>
+                    </div>
+                )}
+
+                {this.state.ftIsOpen && (
+                    <div>
+                        <div className="ftOpen">
+                        <button className="button" onClick={this.handleClick.bind(this)}>
+                            <div className='features'>Features<div id='symbol'>-</div>
+                            </div>
+                            </button>
+                        </div>
+                        < Features ft={this.state.features}/>
+                    </div>
+                )}
             </div>
+            <div>
+                {!this.state.bIsOpen && (
+                    <div>
+                        <div className="ftOpen">
+                        <button className="button" onClick={this.handleClickb.bind(this)}>
+                            <div className='features'>Building Instructions<div id='symbol'>+</div>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+                )}
+
+                {this.state.bIsOpen && (
+                    <div>
+                        <div className="ftOpen">
+                        <button className="button" onClick={this.handleClickb.bind(this)}>
+                        <div className='features'>Building Instructions<div id='symbol'>-</div>
+                        </div>
+                        </button>
+                        < Build ft={this.state.features}/>
+                    </div>
+                    </div>
+                )}
+            </div>
+            <div>
+                {!this.state.dIsOpen && (
+                    <div>
+                        <div className="ftOpen">
+                        <button className="button" onClick={this.handleClickd.bind(this)}>
+                        <div className='features'>Deliveries and Returns<div id='symbol'>+</div>
+                        </div>
+                        </button>
+                    </div>
+                    </div>
+                )}
+
+                {this.state.dIsOpen && (
+                    <div>
+                        <div className="ftOpen">
+                        <button className="button" onClick={this.handleClickd.bind(this)}>
+                            <div className='features'>Deliveries and Returns<div id='symbol'>-</div>
+                        </div>
+                        </button>
+                        < Build ft={this.state.features}/>
+                    </div>
+                    </div>
+                )}
+            </div>
+                
           </>
         );
     }
