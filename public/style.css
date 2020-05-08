@@ -235,7 +235,8 @@
 .only-border{
     border: 3px solid rgb(224, 224, 224);
     width: 50%;
-    margin: auto
+    margin: auto;
+    padding-bottom: 20px
 }
 
 .top-section {
@@ -314,6 +315,31 @@
     font-size: 15px;
     width: 80%;
     padding-bottom: 15px;
-    
-    
+}
+
+.bottom-Section {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1%;
+    width: 99%;
+    justify-content: left;
+    padding-top: 30px;
+}
+
+.img-select {
+    box-shadow: 1px 1px 5px grey; 
+    height: 200px;
+    width: 40%;
+}
+
+.info-select {
+    padding-left: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    padding-bottom: 20px;
+}
+
+.infostatic {
+    font-weight: bold;
+
 }

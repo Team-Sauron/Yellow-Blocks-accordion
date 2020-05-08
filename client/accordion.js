@@ -5,16 +5,7 @@ import axios from 'axios';
 import Features from './components/features.jsx';
 import Build from './components/buildinstructions.jsx'
 
-/*const Header = styled.h1`
-    font-family: Chilanka;
-    `*/
-/*const Sections = styled.div`
-        display: grid | inline-grid;
-    
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
-    `
-*/
+
 class Accordion extends React.Component {
     constructor(props) {
         super(props)

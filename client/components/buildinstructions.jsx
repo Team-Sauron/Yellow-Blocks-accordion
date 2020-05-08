@@ -68,18 +68,22 @@ const Build = ({ft}) => {
                 </div> 
             </div>
             </div>
-            {/*<div className='bottom-Section'>
+            <div className='bottom-Section'>
+
                 <img className="img-select" src= {ft.img19}/>
-                <div className="file">File size</div>
-                    <div className="des-middle">{ft.des9}</div>
-                <div className="description">Description</div>
-                    <div className="des-last1">{ft.des46}</div>
-                <div className="print">Print Versions</div>
-                    <ul>
-                    <li className="des-last2">HOLA</li>
-                    <li className="des-last3">HOLA</li>
-                    </ul>
-    </div>*/}
+
+                <div className="info-select">
+                    <div className="infostatic">File size</div>
+                        <div className="des-middle">{ft.des9}</div>
+                     <div className="infostatic">Description</div>
+                        <div className="des-last1">{ft.des46}</div>
+                    <div className="infostatic">Print Versions</div>
+                         <ul>
+                         <li>hola</li>
+                         <li>hola</li>
+                        </ul>
+                </div>
+            </div>
         </div>
         </>
 
