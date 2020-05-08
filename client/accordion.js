@@ -14,6 +14,7 @@ class Accordion extends React.Component {
             ftIsOpen: false,
             bIsOpen: false,
             dIsOpen : false,
+            cImg: 
         };
        
     }
@@ -26,6 +27,7 @@ class Accordion extends React.Component {
    axios.get(`/api/accordion/${id}`)
         .then(function (response) {
             they.setState({features: response.data.features})
+            they.setState({cImg: response.data.features.item.img10})
             console.log("HERE RES AXIOS ", response);
         })
         .catch(function (error) {
@@ -50,6 +52,10 @@ class Accordion extends React.Component {
         this.setState(state=> ({
             dIsOpen: !state.dIsOpen
         }));
+    }
+
+    handleClickImg() {
+        this.setState({cImg: e.target.cImg})
     }
     
     render () {
@@ -99,7 +105,7 @@ class Accordion extends React.Component {
                         <div className='features'>Building Instructions<div id='symbol'>-</div>
                         </div>
                         </button>
-                        < Build ft={this.state.features}/>
+                        < Build ft={this.state.features} cImg={this.state.cImg}/>
                     </div>
                     </div>
                 )}

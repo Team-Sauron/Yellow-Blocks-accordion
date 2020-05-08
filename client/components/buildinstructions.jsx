@@ -1,8 +1,12 @@
 import React from 'react';
 
-const Build = ({ft}) => {
-          
+class Build extends React.Component {
+    constructor(props){
+        super(props);
+    }      
     
+  render() { 
+      const ft = this.props.ft 
     return (  
         <>
                
@@ -27,7 +31,7 @@ const Build = ({ft}) => {
             <div>
             <div className="middle-section">    
                 <div className="item">
-                <img className="img-item" src= {ft.img10}/>
+                <img className="img-item" src= {ft.img10} onClick={this.props.cImg}/>
                 <div className="des-item">{ft.des10}</div>
                 </div> 
                 <div className="item">          
@@ -70,7 +74,7 @@ const Build = ({ft}) => {
             </div>
             <div className='bottom-Section'>
 
-                <img className="img-select" src= {ft.img19}/>
+                <img className="img-select" src= {cImg}/>
 
                 <div className="info-select">
                     <div className="infostatic">File size</div>
@@ -91,5 +95,6 @@ const Build = ({ft}) => {
 
      );
     }
+  }
 
 export default Build;
