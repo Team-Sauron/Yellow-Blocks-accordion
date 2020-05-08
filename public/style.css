@@ -185,11 +185,21 @@
     width: 100% !important;
 }
 
-.ftOpen {
+.button {
+    
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 0px;
+    border-width: 0.5px;
+    border-color: rgb(201, 201, 201);
+    background-color: white;
     font-family: 'Poppins', sans-serif;
     font-size: 20px;
     padding-top: 20px;
+    width: 100%;
     padding-bottom: 20px;
-    width: 69%;
-    margin:auto;
+    text-align: left;
+    text-indent: 15%;
+
+    
 }

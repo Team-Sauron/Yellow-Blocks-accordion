@@ -20,7 +20,9 @@ class Accordion extends React.Component {
         super(props)
         this.state = {
             features: [],
-            isOpen: false
+            ftIsOpen: false,
+            bIsOpen: false,
+            dIsOpen : false,
         };
        
     }
@@ -43,7 +45,19 @@ class Accordion extends React.Component {
 
     handleClick() {
         this.setState(state=> ({
-            isOpen: !state.isOpen
+            ftIsOpen: !state.ftIsOpen
+        }));
+    }
+
+    handleClickb() {
+        this.setState(state=> ({
+            bIsOpen: !state.bIsOpen
+        }));
+    }
+
+    handleClickd() {
+        this.setState(state=> ({
+            dIsOpen: !state.dIsOpen
         }));
     }
     
@@ -52,26 +66,60 @@ class Accordion extends React.Component {
         return (
             <>
             <div>
-                {!this.state.isOpen && (
+                {!this.state.ftIsOpen && (
                     <div>
-                        <div className="ftOpen">Features
-                        <button onClick={this.handleClick.bind(this)}>X</button>
+                        <div className="ftOpen">
+                        <button className="button" onClick={this.handleClick.bind(this)}>Features</button>
                         </div>
                     </div>
                 )}
 
-                {this.state.isOpen && (
+                {this.state.ftIsOpen && (
                     <div>
-                        <div className="ftOpen">Features
-                        <button onClick={this.handleClick.bind(this)}>X</button>
+                        <div className="ftOpen">
+                        <button className="button" onClick={this.handleClick.bind(this)}>Features</button>
                         </div>
                         < Features ft={this.state.features}/>
                     </div>
                 )}
-                
-
-                < Build ft={this.state.features}/>
             </div>
+            <div>
+                {!this.state.bIsOpen && (
+                    <div>
+                        <div className="ftOpen">
+                        <button className="button" onClick={this.handleClickb.bind(this)}>Building Instructions</button>
+                        </div>
+                    </div>
+                )}
+
+                {this.state.bIsOpen && (
+                    <div>
+                        <div className="ftOpen">
+                        <button className="button" onClick={this.handleClickb.bind(this)}>Building Instructions</button>
+                        </div>
+                        < Build ft={this.state.features}/>
+                    </div>
+                )}
+            </div>
+            <div>
+                {!this.state.dIsOpen && (
+                    <div>
+                        <div className="ftOpen">
+                        <button className="button" onClick={this.handleClickd.bind(this)}>Deliveries and Returns</button>
+                        </div>
+                    </div>
+                )}
+
+                {this.state.dIsOpen && (
+                    <div>
+                        <div className="ftOpen">
+                        <button className="button" onClick={this.handleClickd.bind(this)}>Deliveries and Returns</button>
+                        </div>
+                        < Build ft={this.state.features}/>
+                    </div>
+                )}
+            </div>
+                
           </>
         );
     }
