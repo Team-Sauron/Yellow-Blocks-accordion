@@ -66,8 +66,8 @@ class Accordion extends React.Component {
                 {!this.state.ftIsOpen && (
                     <div>
                         <div className="ftOpen">
-                        <button className="button" onClick={this.handleClick.bind(this)}>
-                            <div className='features'>Features<div id='symbol'>{<BsPlusCircle />}</div>
+                        <button className="button" id ='mainft' onClick={this.handleClick.bind(this)}>
+                            <div className='features' >Features<div id='symbol'>{<BsPlusCircle />}</div>
                             </div>
                             </button>
                         </div>
@@ -77,8 +77,8 @@ class Accordion extends React.Component {
                 {this.state.ftIsOpen && (
                     <div>
                         <div className="ftOpen">
-                        <button className="button" onClick={this.handleClick.bind(this)}>
-                            <div className='features'>Features<div id='symbol'>{<AiOutlineMinusCircle />}</div>
+                        <button className="button" id ='mainft' onClick={this.handleClick.bind(this)}>
+                            <div className='features' >Features<div id='symbol'>{<AiOutlineMinusCircle />}</div>
                             </div>
                             </button>
                         </div>
