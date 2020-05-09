@@ -10,9 +10,9 @@ accordion.use(express.static('public'));
 accordion.use(express.json());
 
 // for testing purposes
-/*accordion.get('/', async (req, res) => {
+accordion.get('/', async (req, res) => {
   res.send('pass!');
-});*/
+});
 //
 
 accordion.get('/api/accordion/:id', (req, res) => {

@@ -209,6 +209,10 @@
     text-indent: 15%;
 }
 
+#mainft {
+    margin-top: 50%;
+}
+
 #symbol {
     
     float: right;

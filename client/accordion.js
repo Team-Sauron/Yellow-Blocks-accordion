@@ -32,10 +32,10 @@ class Accordion extends React.Component {
         .then(function (response) {
             they.setState({features: response.data.features})
             they.setState({cImg: response.data.features.item1.A})
-            console.log("HERE RES AXIOS ", response);
+            console.log(response);
         })
         .catch(function (error) {
-            console.log("AXIOS ERROR ",error);
+            console.log(error);
           })
           .finally(function () {});
     }
@@ -66,8 +66,8 @@ class Accordion extends React.Component {
                 {!this.state.ftIsOpen && (
                     <div>
                         <div className="ftOpen">
-                        <button className="button" onClick={this.handleClick.bind(this)}>
-                            <div className='features'>Features<div id='symbol'>{<BsPlusCircle />}</div>
+                        <button className="button" id ='mainft' onClick={this.handleClick.bind(this)}>
+                            <div className='features' >Features<div id='symbol'>{<BsPlusCircle />}</div>
                             </div>
                             </button>
                         </div>
@@ -77,8 +77,8 @@ class Accordion extends React.Component {
                 {this.state.ftIsOpen && (
                     <div>
                         <div className="ftOpen">
-                        <button className="button" onClick={this.handleClick.bind(this)}>
-                            <div className='features'>Features<div id='symbol'>{<AiOutlineMinusCircle />}</div>
+                        <button className="button" id ='mainft' onClick={this.handleClick.bind(this)}>
+                            <div className='features' >Features<div id='symbol'>{<AiOutlineMinusCircle />}</div>
                             </div>
                             </button>
                         </div>
@@ -89,8 +89,8 @@ class Accordion extends React.Component {
             <div>
                 {!this.state.bIsOpen && (
                     <div>
-                        <div className="ftOpen">
-                        <button className="button" onClick={this.handleClickb.bind(this)}>
+                        <div className="ftOpen" id="building">
+                        <button className="button"  onClick={this.handleClickb.bind(this)}>
                             <div className='features'>Building Instructions<div id='symbol'>{<BsPlusCircle />}</div>
                             </div>
                         </button>

@@ -57,7 +57,7 @@ class Build extends React.Component {
                     <div className={ft[this.state.infoSelected]['C'] === ft.item1.C ? 'des-On' : 'des-Off'} data='item1' >{ft.item1.C}</div>
                 </div> 
 
-                <div className="item"onClick={this.handleClick}>          
+                <div className="item" id="testimg" onClick={this.handleClick}>          
                     <img className={ft[this.state.infoSelected]['A'] === ft.item2.A ? 'img-On' : 'img-Off'} src= {ft.item2.A} data='item2' />
                     <div className={ft[this.state.infoSelected]['C'] === ft.item2.C ? 'des-On' : 'des-Off'} data='item2'>{ft.item2.C} </div>
                 </div> 
