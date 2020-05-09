@@ -384,7 +384,7 @@
     opacity: 0.5;
 }
 
-.des-on {
+.des-On {
     font-family: 'Poppins', sans-serif;
     color: grey;
     text-align: center;
@@ -393,11 +393,12 @@
     padding-bottom: 15px;
 }
 
-.des-off {
+.des-Off {
     font-family: 'Poppins', sans-serif;
     color: grey;
     text-align: center;
     font-size: 15px;
     width: 80%;
     padding-bottom: 15px;
+    opacity: 0.5;
 }
