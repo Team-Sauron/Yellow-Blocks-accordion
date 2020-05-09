@@ -15,7 +15,7 @@ class Build extends React.Component {
  
     handleClick(e) {
         e.preventDefault();
-        console.log(e.target)
+        
         var string = e.target.getAttribute('data');
         if ( string !== undefined) {
             this.setState({infoSelected: e.target.getAttribute('data')});
@@ -27,7 +27,7 @@ class Build extends React.Component {
 
 
   render() { 
-      console.log(this.state.infoSelected);
+      
       const ft = this.props.ft 
     return (  
         <>
