@@ -3,7 +3,11 @@ import ReactDOM from 'react-dom';
 import styled from 'styled-components';
 import axios from 'axios';
 import Features from './components/features.jsx';
-import Build from './components/buildinstructions.jsx'
+import Build from './components/buildinstructions.jsx';
+import Delivery from './components/delivery.jsx';
+import {BsPlusCircle} from 'react-icons/bs';
+import {AiOutlineMinusCircle} from 'react-icons/ai';
+
 
 
 class Accordion extends React.Component {
@@ -14,7 +18,8 @@ class Accordion extends React.Component {
             ftIsOpen: false,
             bIsOpen: false,
             dIsOpen : false,
-        };
+            cImg: '',
+        }
        
     }
 
@@ -26,6 +31,7 @@ class Accordion extends React.Component {
    axios.get(`/api/accordion/${id}`)
         .then(function (response) {
             they.setState({features: response.data.features})
+            they.setState({cImg: response.data.features.item1.A})
             console.log("HERE RES AXIOS ", response);
         })
         .catch(function (error) {
@@ -61,7 +67,7 @@ class Accordion extends React.Component {
                     <div>
                         <div className="ftOpen">
                         <button className="button" onClick={this.handleClick.bind(this)}>
-                            <div className='features'>Features<div id='symbol'>+</div>
+                            <div className='features'>Features<div id='symbol'>{<BsPlusCircle />}</div>
                             </div>
                             </button>
                         </div>
@@ -72,7 +78,7 @@ class Accordion extends React.Component {
                     <div>
                         <div className="ftOpen">
                         <button className="button" onClick={this.handleClick.bind(this)}>
-                            <div className='features'>Features<div id='symbol'>-</div>
+                            <div className='features'>Features<div id='symbol'>{<AiOutlineMinusCircle />}</div>
                             </div>
                             </button>
                         </div>
@@ -85,7 +91,7 @@ class Accordion extends React.Component {
                     <div>
                         <div className="ftOpen">
                         <button className="button" onClick={this.handleClickb.bind(this)}>
-                            <div className='features'>Building Instructions<div id='symbol'>+</div>
+                            <div className='features'>Building Instructions<div id='symbol'>{<BsPlusCircle />}</div>
                             </div>
                         </button>
                     </div>
@@ -96,10 +102,10 @@ class Accordion extends React.Component {
                     <div>
                         <div className="ftOpen">
                         <button className="button" onClick={this.handleClickb.bind(this)}>
-                        <div className='features'>Building Instructions<div id='symbol'>-</div>
+                        <div className='features'>Building Instructions<div id='symbol'>{<AiOutlineMinusCircle />}</div>
                         </div>
                         </button>
-                        < Build ft={this.state.features}/>
+                        < Build ft={this.state.features} cImg={this.state.cImg} />
                     </div>
                     </div>
                 )}
@@ -109,7 +115,7 @@ class Accordion extends React.Component {
                     <div>
                         <div className="ftOpen">
                         <button className="button" onClick={this.handleClickd.bind(this)}>
-                        <div className='features'>Deliveries and Returns<div id='symbol'>+</div>
+                        <div className='features'>Deliveries and Returns<div id='symbol'>{<BsPlusCircle />}</div>
                         </div>
                         </button>
                     </div>
@@ -120,10 +126,10 @@ class Accordion extends React.Component {
                     <div>
                         <div className="ftOpen">
                         <button className="button" onClick={this.handleClickd.bind(this)}>
-                            <div className='features'>Deliveries and Returns<div id='symbol'>-</div>
+                            <div className='features'>Deliveries and Returns<div id='symbol'>{<AiOutlineMinusCircle />}</div>
                         </div>
                         </button>
-                        < Build ft={this.state.features}/>
+                        < Delivery ft={this.state.features}/>
                     </div>
                     </div>
                 )}

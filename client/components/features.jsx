@@ -7,7 +7,7 @@ const Features = ({ft}) => {
         <>
         <div>
                 <div className="section1">
-                <div className="image1" style={{'background-image': `url(${ft.img1})`}}>
+                <div className="image1" style={{'backgroundImage': `url(${ft.img1})`}}>
                     <div className="t1">
                         <div>{ft.t1}</div>
                         <div id='des1'>{ft.des1}</div>
