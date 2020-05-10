@@ -196,8 +196,9 @@
     border-bottom: 0px;
     border-width: 0.5px;
     border-color: rgb(201, 201, 201);
-    background-color: white;
+    background-color: #F8F8F8;
     padding-left: 0px
+    
 }
 
 .features {
