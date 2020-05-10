@@ -197,6 +197,7 @@
     border-width: 0.5px;
     border-color: rgb(201, 201, 201);
     background-color: white;
+    padding-left: 0px
 }
 
 .features {
@@ -207,10 +208,6 @@
     width: 100%;
     text-align: left;
     text-indent: 15%;
-}
-
-#mainft {
-    margin-top: 50%;
 }
 
 #symbol {
