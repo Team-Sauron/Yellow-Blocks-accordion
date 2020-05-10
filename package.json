@@ -4,7 +4,8 @@
   "description": "Smego",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server",
+    "start": "node server",
+    "start-dev": "nodemon server",
     "build": "webpack --config webpack.config.js",
     "react-dev": "webpack -d --watch",
     "seed": "node ./data/db/base.js",
