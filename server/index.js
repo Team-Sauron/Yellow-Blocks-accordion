@@ -9,11 +9,10 @@ const port = 3004;
 accordion.use(express.static('public'));
 accordion.use(express.json());
 
-// for testing purposes
-accordion.get('/', async (req, res) => {
-  res.send('pass!');
+accordion.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  next();
 });
-//
 
 accordion.get('/api/accordion/:id', (req, res) => {
  const id = req.params;
