@@ -17,7 +17,8 @@ class Build extends React.Component {
         e.preventDefault();
         
         var string = e.target.getAttribute('data');
-        if ( string !== undefined) {
+        console.log(e.target.getAttribute('data'))
+        if ( e.target !== undefined) {
             this.setState({infoSelected: e.target.getAttribute('data')});
            
         }       
@@ -52,52 +53,52 @@ class Build extends React.Component {
 
             <div>
             <div className="middle-section">    
-                <div className="item" onClick={this.handleClick}>
+                <div className="item" data='item1' onClick={this.handleClick}>
                     <img className={ft[this.state.infoSelected]['A'] === ft.item1.A ? 'img-On' : 'img-Off'} src= {ft.item1.A} data='item1' />
                     <div className={ft[this.state.infoSelected]['C'] === ft.item1.C ? 'des-On' : 'des-Off'} data='item1' >{ft.item1.C}</div>
                 </div> 
 
-                <div className="item" id="testimg" onClick={this.handleClick}>          
+                <div className="item" id="testimg" data='item2' onClick={this.handleClick}>          
                     <img className={ft[this.state.infoSelected]['A'] === ft.item2.A ? 'img-On' : 'img-Off'} src= {ft.item2.A} data='item2' />
                     <div className={ft[this.state.infoSelected]['C'] === ft.item2.C ? 'des-On' : 'des-Off'} data='item2'>{ft.item2.C} </div>
                 </div> 
 
-                <div className="item" onClick={this.handleClick}>
+                <div className="item" data='item3' onClick={this.handleClick}>
                     <img className={ft[this.state.infoSelected]['A'] === ft.item3.A ? 'img-On' : 'img-Off'} src= {ft.item3.A} data='item3'/>
                     <div className={ft[this.state.infoSelected]['C'] === ft.item3.C ? 'des-On' : 'des-Off'} data='item3'>{ft.item3.C}</div>
                 </div> 
 
-                <div className="item" onClick={this.handleClick}>
+                <div className="item" data='item4' onClick={this.handleClick}>
                     <img className={ft[this.state.infoSelected]['A'] === ft.item4.A ? 'img-On' : 'img-Off'} src= {ft.item4.A} data='item4' />
                     <div className={ft[this.state.infoSelected]['C'] === ft.item4.C ? 'des-On' : 'des-Off'} data='item4'>{ft.item4.C}</div>
                 </div> 
 
-                <div className="item" onClick={this.handleClick}>
+                <div className="item" data='item5' onClick={this.handleClick}>
                     <img className={ft[this.state.infoSelected]['A'] === ft.item5.A ? 'img-On' : 'img-Off'} src= {ft.item5.A} data='item5' />
                     <div className={ft[this.state.infoSelected]['C'] === ft.item5.C ? 'des-On' : 'des-Off'} data='item5' >{ft.item5.C}</div>
                 </div> 
 
-                <div className="item" onClick={this.handleClick}>
+                <div className="item" data='item6' onClick={this.handleClick}>
                     <img className={ft[this.state.infoSelected]['A'] === ft.item6.A ? 'img-On' : 'img-Off'} src= {ft.item6.A} data='item6' />
                     <div className={ft[this.state.infoSelected]['C'] === ft.item6.C ? 'des-On' : 'des-Off'} data='item6'>{ft.item6.C}</div>
                 </div> 
 
-                <div className="item" onClick={this.handleClick}>
+                <div className="item" data='item7' onClick={this.handleClick}>
                     <img className={ft[this.state.infoSelected]['A'] === ft.item7.A ? 'img-On' : 'img-Off'} src= {ft.item7.A} data='item7' />
                     <div className={ft[this.state.infoSelected]['C'] === ft.item7.C ? 'des-On' : 'des-Off'} data='item7'>{ft.item7.C}</div>
                 </div> 
 
-                <div className="item" onClick={this.handleClick}>
+                <div className="item" data='item8' onClick={this.handleClick}>
                     <img className={ft[this.state.infoSelected]['A'] === ft.item8.A ? 'img-On' : 'img-Off'} src= {ft.item8.A} data='item8' />
                     <div className={ft[this.state.infoSelected]['C'] === ft.item8.C ? 'des-On' : 'des-Off'} data='item8'>{ft.item8.C}</div>
                 </div> 
 
-                <div className="item" onClick={this.handleClick}>
+                <div className="item" data='item9' onClick={this.handleClick}>
                     <img className={ft[this.state.infoSelected]['A'] === ft.item9.A ? 'img-On' : 'img-Off'} src= {ft.item9.A} data='item9' />
                     <div className={ft[this.state.infoSelected]['C'] === ft.item9.C ? 'des-On' : 'des-Off'} data='item9'>{ft.item9.C}</div>
                 </div> 
 
-                <div className="item" onClick={this.handleClick}>
+                <div className="item" data='item10' onClick={this.handleClick}>
                     <img className={ft[this.state.infoSelected]['A'] === ft.item10.A ? 'img-On' : 'img-Off'}  src= {ft.item10.A} data='item10'/>
                     <div className={ft[this.state.infoSelected]['C'] === ft.item10.C ? 'des-On' : 'des-Off'} data='item10'>{ft.item10.C}</div>
                 </div> 
