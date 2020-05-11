@@ -27,7 +27,7 @@ class Build extends React.Component {
     
 
 
-  render() { 
+   render() { 
       
       const ft = this.props.ft 
     return (  
