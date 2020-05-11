@@ -32,12 +32,12 @@ class Accordion extends React.Component {
         .then(function (response) {
             they.setState({features: response.data.features})
             they.setState({cImg: response.data.features.item1.A})
-            console.log(response);
+           
         })
         .catch(function (error) {
             console.log(error);
-          })
-          .finally(function () {});
+        })
+        .finally(function () {});
     }
 
     handleClick() {

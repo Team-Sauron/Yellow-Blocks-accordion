@@ -1,24 +1,28 @@
 const express = require('express');
 
 const accordion = express();
-const path = require('path');
+//const path = require('path');
 
 const db = require('../data/db/accordion');
 
 const port = 3004;
-accordion.use(express.static('public'));
-accordion.use(express.json());
+
 
 accordion.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
   next();
 });
 
+accordion.use(express.static('public'));
+accordion.use(express.json());
+
 accordion.get('/api/accordion/:id', (req, res) => {
  const id = req.params;
-   
+ 
+   if (id > 100 || id < 1 ) {
+     id = 1;
+   }
  db.findOne({ 'features.id': `${id.id}` }, (err, feature) => {
-  //db.findOne({ 'features.id': '2' }, (err, feature) => {
     if (err) console.log('errordatA');
     res.send(feature);
   });
