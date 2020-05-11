@@ -1,7 +1,6 @@
 const express = require('express');
 
 const accordion = express();
-//const path = require('path');
 
 const db = require('../data/db/accordion');
 
@@ -17,17 +16,17 @@ accordion.use(express.static('public'));
 accordion.use(express.json());
 
 accordion.get('/api/accordion/:id', (req, res) => {
- const id = req.params;
- 
-   if (id > 100 || id < 1 ) {
-     id = 1;
-   }
- db.findOne({ 'features.id': `${id.id}` }, (err, feature) => {
+  let id = req.params;
+
+  if (id > 100 || id < 1) {
+    id = 1;
+  }
+  db.findOne({ 'features.id': `${id.id}` }, (err, feature) => {
     if (err) console.log('errordatA');
     res.send(feature);
   });
 });
 
-accordion.listen(port,() =>console.log(`Listening on port ${port}`));
+accordion.listen(port,() => console.log(`Listening on port ${port}`));
 
 module.exports = accordion;

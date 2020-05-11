@@ -2,34 +2,23 @@ import React from 'react';
 import {MdFileDownload} from 'react-icons/md';
 
 class Build extends React.Component {
-    constructor(props){
-        super(props);
-        this.state={
-            selected: this.props.cImg,
-            infoSelected: 'item1',
+  constructor(props) {
+    super(props);
+    this.state = {
+      infoSelected: 'item1',
+    };
+    this.handleClick = this.handleClick.bind(this)
+  };
 
-        }
-        
-        this.handleClick = this.handleClick.bind(this)
-    }      
- 
-    handleClick(e) {
-        e.preventDefault();
-        
-        var string = e.target.getAttribute('data');
-        console.log(e.target.getAttribute('data'))
-        if ( e.target !== undefined) {
-            this.setState({infoSelected: e.target.getAttribute('data')});
-           
-        }       
+  handleClick(e) {
+    e.preventDefault();
+    if (e.target !== undefined) {
+      this.setState({ infoSelected: e.target.getAttribute('data') });
     }
+  }
 
-    
-
-
-   render() { 
-      
-      const ft = this.props.ft 
+  render() {
+    const ft = { this.props.ft} ;
     return (  
         <>
                

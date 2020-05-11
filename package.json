@@ -38,7 +38,6 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.19.0",
     "eslint-plugin-react-hooks": "^2.5.1",
-    "faker": "^4.1.0",
     "jest": "^26.0.1",
     "puppeteer": "^3.0.4",
     "superagent": "^5.2.2",
@@ -47,6 +46,7 @@
     "webpack-cli": "^3.3.11"
   },
   "dependencies": {
+    "faker": "^4.1.0",
     "@babel/preset-react": "^7.9.4",
     "aws-s3": "^2.0.5",
     "axios": "^0.19.2",

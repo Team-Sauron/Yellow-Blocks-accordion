@@ -4,16 +4,16 @@ const db = require('./accordion.js');
 
 // arrays of imges(urls):
 const arrimg = ['https://smegoaccordion.s3.us-east-2.amazonaws.com/52e3dd40435bb10ff3d8992cc12c30771037dbf85254794e702672d69f4b_640.jpg','https://smegoaccordion.s3.us-east-2.amazonaws.com/52e9d7404f50ab14f1dc8460962e33791c3ad6e04e507441722a72dd9e4cc2_640.jpg','https://smegoaccordion.s3.us-east-2.amazonaws.com/53e0d34a4c53a814f1dc8460962e33791c3ad6e04e50744172297cd5914cc7_640.jpg','https://smegoaccordion.s3.us-east-2.amazonaws.com/54e3d5434b56b10ff3d8992cc12c30771037dbf85254794e722a7dd2954f_640.jpg',
-'https://smegoaccordion.s3.us-east-2.amazonaws.com/54e9dd444e55aa14f1dc8460962e33791c3ad6e04e5074417d2d73d39f4ec1_640.jpg', 'https://smegoaccordion.s3.us-east-2.amazonaws.com/55e2dc434d52a914f1dc8460962e33791c3ad6e04e50744172277fd7914cc7_640.jpg','https://smegoaccordion.s3.us-east-2.amazonaws.com/55e3d3404853ab14f1dc8460962e33791c3ad6e04e507441722a72dc9e44c3_640.jpg','https://smegoaccordion.s3.us-east-2.amazonaws.com/55e8d5464353ad14f1dc8460962e33791c3ad6e04e50744172297cdc904ac3_640.jpg',
-'https://smegoaccordion.s3.us-east-2.amazonaws.com/57e1d0434a56a914f1dc8460962e33791c3ad6e04e50744172287ed3974ccd_640.jpg','https://smegoaccordion.s3.us-east-2.amazonaws.com/57e1d4454f5aaa14f1dc8460962e33791c3ad6e04e507441722a72dd934ec3_640.jpg', 'https://smegoaccordion.s3.us-east-2.amazonaws.com/57e5dd444254af14f1dc8460962e33791c3ad6e04e50744172297cd59649c1_640.jpg','https://smegoaccordion.s3.us-east-2.amazonaws.com/57e8d1404f5bab14f1dc8460962e33791c3ad6e04e507441722978d69f48c6_640.jpg',
-'https://smegoaccordion.s3.us-east-2.amazonaws.com/57e8d7414852b10ff3d8992cc12c30771037dbf85254794e732f7bd29544_640.jpg','https://smegoaccordion.s3.us-east-2.amazonaws.com/57e8dd444851ad14f1dc8460962e33791c3ad6e04e5074417d2e7ed69f4cc4_640.jpg', 'https://smegoaccordion.s3.us-east-2.amazonaws.com/57e9d24a4c53a514f1dc8460962e33791c3ad6e04e507441722872d79748c4_640.jpg','https://smegoaccordion.s3.us-east-2.amazonaws.com/5ee8d5444957b10ff3d8992cc12c30771037dbf85254794e732f7ad39349_640.jpg',
-'https://smegoaccordion.s3.us-east-2.amazonaws.com/paprika-4336024_640.jpg','https://smegoaccordion.s3.us-east-2.amazonaws.com/sad-clown-1279878_640.jpg','https://smegoaccordion.s3.us-east-2.amazonaws.com/water-3167440_640.jpg','https://smegoaccordion.s3.us-east-2.amazonaws.com/a.jpg','https://smegoaccordion.s3.us-east-2.amazonaws.com/b.jpg','https://smegoaccordion.s3.us-east-2.amazonaws.com/c.jpg','https://smegoaccordion.s3.us-east-2.amazonaws.com/d.jpg','https://smegoaccordion.s3.us-east-2.amazonaws.com/e.jpg',
-'https://smegoaccordion.s3.us-east-2.amazonaws.com/f.jpg','https://smegoaccordion.s3.us-east-2.amazonaws.com/g.jpg','https://smegoaccordion.s3.us-east-2.amazonaws.com/h.jpg','https://smegoaccordion.s3.us-east-2.amazonaws.com/i.jpg','https://smegoaccordion.s3.us-east-2.amazonaws.com/j.jpg','https://smegoaccordion.s3.us-east-2.amazonaws.com/k.jpg','https://smegoaccordion.s3.us-east-2.amazonaws.com/l.jpg','https://smegoaccordion.s3.us-east-2.amazonaws.com/m.jpg','https://smegoaccordion.s3.us-east-2.amazonaws.com/n.jpg',
-'https://smegoaccordion.s3.us-east-2.amazonaws.com/m.jpg','https://smegoaccordion.s3.us-east-2.amazonaws.com/o.jpg','https://smegoaccordion.s3.us-east-2.amazonaws.com/p.jpg','https://smegoaccordion.s3.us-east-2.amazonaws.com/q.jpg']
+  'https://smegoaccordion.s3.us-east-2.amazonaws.com/54e9dd444e55aa14f1dc8460962e33791c3ad6e04e5074417d2d73d39f4ec1_640.jpg', 'https://smegoaccordion.s3.us-east-2.amazonaws.com/55e2dc434d52a914f1dc8460962e33791c3ad6e04e50744172277fd7914cc7_640.jpg','https://smegoaccordion.s3.us-east-2.amazonaws.com/55e3d3404853ab14f1dc8460962e33791c3ad6e04e507441722a72dc9e44c3_640.jpg','https://smegoaccordion.s3.us-east-2.amazonaws.com/55e8d5464353ad14f1dc8460962e33791c3ad6e04e50744172297cdc904ac3_640.jpg',
+  'https://smegoaccordion.s3.us-east-2.amazonaws.com/57e1d0434a56a914f1dc8460962e33791c3ad6e04e50744172287ed3974ccd_640.jpg','https://smegoaccordion.s3.us-east-2.amazonaws.com/57e1d4454f5aaa14f1dc8460962e33791c3ad6e04e507441722a72dd934ec3_640.jpg', 'https://smegoaccordion.s3.us-east-2.amazonaws.com/57e5dd444254af14f1dc8460962e33791c3ad6e04e50744172297cd59649c1_640.jpg','https://smegoaccordion.s3.us-east-2.amazonaws.com/57e8d1404f5bab14f1dc8460962e33791c3ad6e04e507441722978d69f48c6_640.jpg',
+  'https://smegoaccordion.s3.us-east-2.amazonaws.com/57e8d7414852b10ff3d8992cc12c30771037dbf85254794e732f7bd29544_640.jpg','https://smegoaccordion.s3.us-east-2.amazonaws.com/57e8dd444851ad14f1dc8460962e33791c3ad6e04e5074417d2e7ed69f4cc4_640.jpg', 'https://smegoaccordion.s3.us-east-2.amazonaws.com/57e9d24a4c53a514f1dc8460962e33791c3ad6e04e507441722872d79748c4_640.jpg','https://smegoaccordion.s3.us-east-2.amazonaws.com/5ee8d5444957b10ff3d8992cc12c30771037dbf85254794e732f7ad39349_640.jpg',
+  'https://smegoaccordion.s3.us-east-2.amazonaws.com/paprika-4336024_640.jpg','https://smegoaccordion.s3.us-east-2.amazonaws.com/sad-clown-1279878_640.jpg','https://smegoaccordion.s3.us-east-2.amazonaws.com/water-3167440_640.jpg','https://smegoaccordion.s3.us-east-2.amazonaws.com/a.jpg','https://smegoaccordion.s3.us-east-2.amazonaws.com/b.jpg','https://smegoaccordion.s3.us-east-2.amazonaws.com/c.jpg','https://smegoaccordion.s3.us-east-2.amazonaws.com/d.jpg','https://smegoaccordion.s3.us-east-2.amazonaws.com/e.jpg',
+  'https://smegoaccordion.s3.us-east-2.amazonaws.com/f.jpg','https://smegoaccordion.s3.us-east-2.amazonaws.com/g.jpg','https://smegoaccordion.s3.us-east-2.amazonaws.com/h.jpg','https://smegoaccordion.s3.us-east-2.amazonaws.com/i.jpg','https://smegoaccordion.s3.us-east-2.amazonaws.com/j.jpg','https://smegoaccordion.s3.us-east-2.amazonaws.com/k.jpg','https://smegoaccordion.s3.us-east-2.amazonaws.com/l.jpg','https://smegoaccordion.s3.us-east-2.amazonaws.com/m.jpg','https://smegoaccordion.s3.us-east-2.amazonaws.com/n.jpg',
+  'https://smegoaccordion.s3.us-east-2.amazonaws.com/m.jpg','https://smegoaccordion.s3.us-east-2.amazonaws.com/o.jpg','https://smegoaccordion.s3.us-east-2.amazonaws.com/p.jpg','https://smegoaccordion.s3.us-east-2.amazonaws.com/q.jpg']
 
 // arrays w/videos(10urls):
 const arrvid1 = ['https://youtu.be/JGa0E10w8oI', 'https://youtu.be/LJP1DphOWPs', 'https://youtu.be/MUhR-lWJDuk', 'https://youtu.be/ZXareiya3zI?list=UUPLAYER_TimeWarnerCable', 'https://youtu.be/31-hLbF-WRE'];
-const arrvid2 = ['https://youtu.be/JGa0E10w8oI', 'https://youtu.be/LJP1DphOWPs', 'https://youtu.be/MUhR-lWJDuk', 'https://youtu.be/ZXareiya3zI?list=UUPLAYER_TimeWarnerCable', 'https://youtu.be/31-hLbF-WRE'];
+const arrvid2 = ['https://youtu.be/V8FbxlQe_XA?list=UUPLAYER_LittleBabyBum', 'https://youtu.be/kDFzVeGVlNQ?list=UUPLAYER_colorstv', 'https://youtu.be/9BnLbv6QYcA', 'https://youtu.be/u0Z7EPh8oLU', 'https://youtu.be/UK9_h5Iku64?list=UUPLAYER_cyriak'];
 
 
 function capitalize(string) {
@@ -21,12 +21,10 @@ function capitalize(string) {
 }
 
 function featfunc() {
-  db.collection.drop()
+  db.collection.drop();
   let i = 0;
   while (i < 100) {
-    
     const features = new db();
-       
     features.features.id = i;
     features.features.t1 = `${capitalize(faker.lorem.words(nb_words = 3, variable_nb_words = true))} ${capitalize(faker.lorem.words(nb_words = 6, variable_nb_words = true))}`;
     features.features.t2 = `${capitalize(faker.lorem.words(nb_words = 9, variable_nb_words = true))}`;
@@ -116,18 +114,16 @@ function featfunc() {
     features.features.des50 = `${capitalize(faker.lorem.word())} ${faker.lorem.sentence(nb_words = 16, variable_nb_words = true)}`;
     features.features.des51 = `${capitalize(faker.lorem.word())} ${faker.lorem.sentence(nb_words = 16, variable_nb_words = true)}`;
     features.features.des52 = `${capitalize(faker.lorem.word())} ${faker.lorem.sentence(nb_words = 16, variable_nb_words = true)}`;
-    
-    i += 1;
-    features.save((err,res)=>{
-      if (err) {
-        console.log('error')
-      } else {
-        console.log('datasaved')
-      }
-    })  
-  }
 
-  
+    i += 1;
+    features.save((err,res) => {
+      if (err) {
+        console.log('error');
+      } else {
+        console.log('datasaved');
+      }
+    });
+  }
 }
 
-featfunc()
+featfunc();
