@@ -21,12 +21,12 @@ function capitalize(string) {
 }
 
 function featfunc() {
+  db.collection.drop()
   let i = 0;
   while (i < 10) {
     
     const features = new db();
-    //db.collection.remove({})
-    
+       
     features.features.id = i;
     features.features.t1 = `${capitalize(faker.lorem.words(nb_words = 3, variable_nb_words = true))} ${capitalize(faker.lorem.words(nb_words = 6, variable_nb_words = true))}`;
     features.features.t2 = `${capitalize(faker.lorem.words(nb_words = 9, variable_nb_words = true))}`;
