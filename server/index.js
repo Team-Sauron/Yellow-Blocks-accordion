@@ -18,7 +18,10 @@ accordion.use(express.json());
 
 accordion.get('/api/accordion/:id', (req, res) => {
  const id = req.params;
-   
+ 
+   if (id > 100 || id < 1 ) {
+     id = 1;
+   }
  db.findOne({ 'features.id': `${id.id}` }, (err, feature) => {
     if (err) console.log('errordatA');
     res.send(feature);
