@@ -71,6 +71,7 @@
     margin-top: 50px;
     padding: 80px;
     font-family: 'Poppins', sans-serif;
+    padding-left: 50%
 }
 
 .image1 {
@@ -89,13 +90,15 @@
 }
 
 .t2 {
-    width: 50%;
+    width: 40%;
     height: 400px;
     text-align: center;
     color: white;
     font-size: 25px;
     margin-top: 250px;
     font-family: 'Poppins', sans-serif;
+    padding-left: 5%;
+    padding-right: 5%;
     }
 
 #des2 {
@@ -178,7 +181,9 @@
     margin-top: 50px;
     padding: 80px;
     font-family: 'Poppins', sans-serif;
+    padding-left: 50%
 }
+
 
 .v2 {
     height: 400px !important;
@@ -224,7 +229,8 @@
     font-weight: bold;
     font-size:25px;
     padding-top: 20px;
-    text-indent: 25%;
+    padding-left: 24.5%;
+    padding-right: 24.5%;
 }
 
 #show {
@@ -359,7 +365,7 @@
 .delivery {
     
     font-family: 'Poppins', sans-serif;
-    font-size: 15px;
+    font-size: 17px;
     width: 69%;
     margin: auto;
 
