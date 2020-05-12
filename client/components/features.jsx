@@ -57,7 +57,7 @@ const Features = ({ ft }) => (
         <div className="image2" style={{ backgroundImage: `url(${ft.img8})` }}>
           <div className="t4">
             <div>{ft.t4}</div>
-            <div className="sub8">{ft.sub8}</div>
+            <div id="des1">{ft.sub8}</div>
           </div>
         </div>
         <div className="v2"><ReactPlayer width="auto" height="400px" url={ft.vid2} /></div>
