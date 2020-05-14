@@ -23,7 +23,7 @@ function capitalize(string) {
 function featfunc() {
   db.collection.drop();
   let i = 0;
-  while (i < 100) {
+  while (i <= 100) {
     const features = new db();
     features.features.id = i;
     features.features.t1 = `${capitalize(faker.lorem.words(nb_words = 3, variable_nb_words = true))} ${capitalize(faker.lorem.words(nb_words = 6, variable_nb_words = true))}`;
