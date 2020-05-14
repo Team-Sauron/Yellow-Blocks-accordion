@@ -2,6 +2,8 @@ version: 2.1
 orbs:
   node: circleci/node@1.1.6
 jobs:
+  machine:
+      image: 'ubuntu-1604:201903-01'
   build-and-test:
     executor:
       name: node/default
@@ -10,7 +12,8 @@ jobs:
       - node/with-cache:
           steps:
             - run: npm install
-            - run: npm test
+            - run: npm start
+            - run: npm test2
 workflows:
     build-and-test:
       jobs:
