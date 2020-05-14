@@ -29,7 +29,7 @@ class Accordion extends React.Component {
       id = loc.slice(loc.indexOf('=') + 1);
     }
     const they = this;
-    axios.get(`http://localhost:3004/api/accordion/${id}`)
+    axios.get(`http://3.23.173.204:3004/api/accordion/${id}`)
       .then((response) => {
         they.setState({ features: response.data.features });
         they.setState({ cImg: response.data.features.item1.A });
