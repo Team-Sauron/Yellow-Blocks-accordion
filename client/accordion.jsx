@@ -7,6 +7,7 @@ import { AiOutlineMinusCircle } from 'react-icons/ai';
 import Features from './components/features.jsx';
 import Build from './components/buildinstructions.jsx';
 import Delivery from './components/delivery.jsx';
+import styles from '../public/style.css';
 
 
 class Accordion extends React.Component {
@@ -28,7 +29,7 @@ class Accordion extends React.Component {
       id = loc.slice(loc.indexOf('=') + 1);
     }
     const they = this;
-    axios.get(`http://3.15.185.40:3004/api/accordion/${id}`)
+    axios.get(`http://3.23.173.204:3004/api/accordion/${id}`)
       .then((response) => {
         they.setState({ features: response.data.features });
         they.setState({ cImg: response.data.features.item1.A });
