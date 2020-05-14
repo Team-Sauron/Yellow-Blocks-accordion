@@ -12,7 +12,6 @@ jobs:
       - node/with-cache:
           steps:
             - run: npm install
-            - run: npm start
             - run: npm test2
 workflows:
     build-and-test:
