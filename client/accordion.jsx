@@ -23,12 +23,12 @@ class Accordion extends React.Component {
 
   componentDidMount() {
     const loc = window.location.href;
-    let id = loc.slice(-1);
-    if (id === 'http://localhost:3004/') {
-      id = 1;
+    let id = 1;
+    if (loc.indexOf('=') !== -1) {
+      id = loc.slice(loc.indexOf('=') + 1);
     }
     const they = this;
-    axios.get(`http://localhost:3004/api/accordion/${id}`)
+    axios.get(`http://3.15.185.40:3004/api/accordion/${id}`)
       .then((response) => {
         they.setState({ features: response.data.features });
         they.setState({ cImg: response.data.features.item1.A });
