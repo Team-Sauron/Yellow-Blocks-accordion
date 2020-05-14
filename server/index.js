@@ -1,5 +1,5 @@
 const express = require('express');
-
+const compression = require('compression');
 const accordion = express();
 
 const db = require('../data/db/accordion');

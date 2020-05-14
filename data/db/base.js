@@ -8,7 +8,7 @@ const arrimg = ['https://smegoaccordion.s3.us-east-2.amazonaws.com/52e3dd40435bb
   'https://smegoaccordion.s3.us-east-2.amazonaws.com/57e1d0434a56a914f1dc8460962e33791c3ad6e04e50744172287ed3974ccd_640.jpg', 'https://smegoaccordion.s3.us-east-2.amazonaws.com/57e1d4454f5aaa14f1dc8460962e33791c3ad6e04e507441722a72dd934ec3_640.jpg', 'https://smegoaccordion.s3.us-east-2.amazonaws.com/57e5dd444254af14f1dc8460962e33791c3ad6e04e50744172297cd59649c1_640.jpg', 'https://smegoaccordion.s3.us-east-2.amazonaws.com/57e8d1404f5bab14f1dc8460962e33791c3ad6e04e507441722978d69f48c6_640.jpg',
   'https://smegoaccordion.s3.us-east-2.amazonaws.com/57e8d7414852b10ff3d8992cc12c30771037dbf85254794e732f7bd29544_640.jpg', 'https://smegoaccordion.s3.us-east-2.amazonaws.com/57e8dd444851ad14f1dc8460962e33791c3ad6e04e5074417d2e7ed69f4cc4_640.jpg', 'https://smegoaccordion.s3.us-east-2.amazonaws.com/57e9d24a4c53a514f1dc8460962e33791c3ad6e04e507441722872d79748c4_640.jpg', 'https://smegoaccordion.s3.us-east-2.amazonaws.com/5ee8d5444957b10ff3d8992cc12c30771037dbf85254794e732f7ad39349_640.jpg',
   'https://smegoaccordion.s3.us-east-2.amazonaws.com/paprika-4336024_640.jpg', 'https://smegoaccordion.s3.us-east-2.amazonaws.com/sad-clown-1279878_640.jpg', 'https://smegoaccordion.s3.us-east-2.amazonaws.com/water-3167440_640.jpg', 'https://smegoaccordion.s3.us-east-2.amazonaws.com/a.jpg', 'https://smegoaccordion.s3.us-east-2.amazonaws.com/b.jpg', 'https://smegoaccordion.s3.us-east-2.amazonaws.com/c.jpg', 'https://smegoaccordion.s3.us-east-2.amazonaws.com/d.jpg', 'https://smegoaccordion.s3.us-east-2.amazonaws.com/e.jpg',
-  'https://smegoaccordion.s3.us-east-2.amazonaws.com/f.jpg', 'https://smegoaccordion.s3.us-east-2.amazonaws.com/g.jpg', 'https://smegoaccordion.s3.us-east-2.amazonaws.com/h.jpg', 'https://smegoaccordion.s3.us-east-2.amazonaws.com/i.jpg', 'https://smegoaccordion.s3.us-east-2.amazonaws.com/j.jpg', 'https://smegoaccordion.s3.us-east-2.amazonaws.com/k.jpg', 'https://smegoaccordion.s3.us-east-2.amazonaws.com/l.jpg', 'https://smegoaccordion.s3.us-east-2.amazonaws.com/m.jpg', 'https://smegoaccordion.s3.us-east-2.amazonaws.com/n.jpg',
+  'https://smegoaccordion.s3.us-east-2.amazonaws.com/f.jpg', 'https://smegoaccordion.s3.us-east-2.amazonaws.com/g.jpg', 'https://smegoaccordion.s3.us-east-2.amazonaws.com/h.jpg', 'https://smegoaccordion.s3.us-east-2.amazonaws.com/i.jpg', 'https://smegoaccordion.s3.us-east-2.amazonaws.com/k.jpg', 'https://smegoaccordion.s3.us-east-2.amazonaws.com/l.jpg', 'https://smegoaccordion.s3.us-east-2.amazonaws.com/m.jpg', 'https://smegoaccordion.s3.us-east-2.amazonaws.com/n.jpg',
   'https://smegoaccordion.s3.us-east-2.amazonaws.com/m.jpg', 'https://smegoaccordion.s3.us-east-2.amazonaws.com/o.jpg', 'https://smegoaccordion.s3.us-east-2.amazonaws.com/p.jpg', 'https://smegoaccordion.s3.us-east-2.amazonaws.com/q.jpg']
 
 // arrays w/videos(10urls):
@@ -23,7 +23,7 @@ function capitalize(string) {
 function featfunc() {
   db.collection.drop();
   let i = 0;
-  while (i < 100) {
+  while (i <= 100) {
     const features = new db();
     features.features.id = i;
     features.features.t1 = `${capitalize(faker.lorem.words(nb_words = 3, variable_nb_words = true))} ${capitalize(faker.lorem.words(nb_words = 6, variable_nb_words = true))}`;
