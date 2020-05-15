@@ -3,6 +3,7 @@ const db = require('./accordion.js');
 
 
 // arrays of imges(urls):
+
 const arrimg = ['https://smegoaccordion.s3.us-east-2.amazonaws.com/1.jpg', 'https://smegoaccordion.s3.us-east-2.amazonaws.com/2.jpg', 'https://smegoaccordion.s3.us-east-2.amazonaws.com/3.jpg','https://smegoaccordion.s3.us-east-2.amazonaws.com/4.jpg','https://smegoaccordion.s3.us-east-2.amazonaws.com/5.jpg','https://smegoaccordion.s3.us-east-2.amazonaws.com/6.jpg','https://smegoaccordion.s3.us-east-2.amazonaws.com/7.jpg','https://smegoaccordion.s3.us-east-2.amazonaws.com/8.jpg','https://smegoaccordion.s3.us-east-2.amazonaws.com/9.jpg',
 'https://smegoaccordion.s3.us-east-2.amazonaws.com/10.jpg', 'https://smegoaccordion.s3.us-east-2.amazonaws.com/11.jpg', 'https://smegoaccordion.s3.us-east-2.amazonaws.com/12.jpg', 'https://smegoaccordion.s3.us-east-2.amazonaws.com/13.jpg', 'https://smegoaccordion.s3.us-east-2.amazonaws.com/14.jpg', 'https://smegoaccordion.s3.us-east-2.amazonaws.com/15.jpg', 'https://smegoaccordion.s3.us-east-2.amazonaws.com/16.jpg', 'https://smegoaccordion.s3.us-east-2.amazonaws.com/a.jpg', 'https://smegoaccordion.s3.us-east-2.amazonaws.com/b.jpg',
 'https://smegoaccordion.s3.us-east-2.amazonaws.com/c.jpg', 'https://smegoaccordion.s3.us-east-2.amazonaws.com/d.jpg', 'https://smegoaccordion.s3.us-east-2.amazonaws.com/e.jpg', 'https://smegoaccordion.s3.us-east-2.amazonaws.com/f.jpg', 'https://smegoaccordion.s3.us-east-2.amazonaws.com/g.jpg', 'https://smegoaccordion.s3.us-east-2.amazonaws.com/h.jpg', 'https://smegoaccordion.s3.us-east-2.amazonaws.com/i.jpg', 'https://smegoaccordion.s3.us-east-2.amazonaws.com/j.jpg', 'https://smegoaccordion.s3.us-east-2.amazonaws.com/k.jpg',
@@ -20,7 +21,7 @@ function capitalize(string) {
 function featfunc() {
   db.collection.drop();
   let i = 0;
-  while (i < 100) {
+  while (i <= 100) {
     const features = new db();
     features.features.id = i;
     features.features.t1 = `${capitalize(faker.lorem.words(nb_words = 3, variable_nb_words = true))} ${capitalize(faker.lorem.words(nb_words = 6, variable_nb_words = true))}`;
