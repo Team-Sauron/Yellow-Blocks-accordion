@@ -1,11 +1,14 @@
 const express = require('express');
 
+const compression = require('compression');
+
 const accordion = express();
 
 const db = require('../data/db/accordion');
 
 const port = 3004;
 
+accordion.use(compression())
 
 accordion.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
