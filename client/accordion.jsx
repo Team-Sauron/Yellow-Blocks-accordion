@@ -7,6 +7,7 @@ import { AiOutlineMinusCircle } from 'react-icons/ai';
 import Features from './components/features.jsx';
 import Build from './components/buildinstructions.jsx';
 import Delivery from './components/delivery.jsx';
+import styles from '../public/style.css';
 
 
 class Accordion extends React.Component {
