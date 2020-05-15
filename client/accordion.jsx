@@ -15,7 +15,7 @@ class Accordion extends React.Component {
     super(props);
     this.state = {
       features: [],
-      ftIsOpen: false,
+      ftIsOpen: true,
       bIsOpen: false,
       dIsOpen: false,
       cImg: '',
