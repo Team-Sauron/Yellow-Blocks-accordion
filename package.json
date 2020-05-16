@@ -10,7 +10,7 @@
     "react-dev": "webpack -d --watch",
     "seed": "node ./data/db/base.js",
     "test2": "node test.js",
-    "test": "jest --detectOpenHandles",
+    "test": "jest --runInBand",
     "test2:watch": "jest --watch"
   },
   "repository": {
