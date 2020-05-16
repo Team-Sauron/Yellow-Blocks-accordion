@@ -11,6 +11,10 @@ jobs:
       name: node/default
     steps:
       - checkout
+      - run: sed -i '/exec "$@"/i mkdir \/dev\/shm\/mongo' /entrypoint.sh; \
+              sed -i '/exec "$@"/i mkdir \/dev\/shm\/mongo' /usr/local/bin/docker-entrypoint.sh; \
+              true
+      - cmd: ["mongod", "--nojournal", "--noprealloc", "--smallfiles", "--dbpath=/dev/shm/mongo"]        
       - node/with-cache:
           steps:
             - run: npm install
