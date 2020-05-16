@@ -19,8 +19,8 @@ beforeAll(async () => {
 });
 
 afterAll(async() => {
-    //await new Promise (resolve => setTimeout( () => resolve(), 500));
- browser.close();
+    await new Promise (resolve => setTimeout( () => resolve(), 500));
+ //browser.close();
 });
 
 describe('search function', () => {
