@@ -2,7 +2,7 @@ const puppeteer = require('puppeteer');
 
 const pageURL = 'http://localhost:3004/?id=8';
 
-let browser;
+const browser = await puppeteer.launch({executablePath:'/usr/bin/chromium-browser'});
 let page;
 
 const width = 1280;
@@ -19,8 +19,8 @@ beforeAll(async () => {
 });
 
 afterAll(async() => {
-    await new Promise (resolve => setTimeout( () => resolve(), 500));
- //browser.close();
+    //await new Promise (resolve => setTimeout( () => resolve(), 500));
+ browser.close();
 });
 
 describe('search function', () => {

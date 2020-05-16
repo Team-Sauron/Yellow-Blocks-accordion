@@ -19,7 +19,8 @@ commands:
     - run:
         name: Install puppeteer with chronium
         command: |
-          npm i puppeteer
+          npm i puppeteer \
+          sudo apt-get install chromium-browser
 orbs:
   node: circleci/node@1.1.6
 jobs:
