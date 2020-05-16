@@ -10,10 +10,10 @@ const height = 720;
 
 beforeAll(async () => {
   browser = await puppeteer.launch({
-    executablePath:'/usr/bin/chromium-browser',
+    executablePath: '/usr/bin/chromium-browser',
     headless: true,
     slowMo: 80,
-    args: [`--window-size=${width},${height}`,'--no-sandbox', '--disable-setuid-sandbox'],
+    args: [`--window-size=${width},${height}`, '--no-sandbox', '--disable-setuid-sandbox'],
   });
   page = await browser.newPage();
   await page.setViewport({ width, height });
