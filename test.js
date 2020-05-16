@@ -10,6 +10,7 @@ const height = 720;
 
 beforeAll(async () => {
   browser = await puppeteer.launch({
+    executablePath:'/usr/bin/chromium-browser',
     headless: true,
     slowMo: 80,
     args: [`--window-size=${width},${height}`,'--no-sandbox', '--disable-setuid-sandbox'],
@@ -19,8 +20,8 @@ beforeAll(async () => {
 });
 
 afterAll(async() => {
-    browser = await puppeteer.launch({executablePath:'/usr/bin/chromium-browser'});
- browser.close();
+    await new Promise (resolve => setTimeout( () => resolve(), 500));
+ //browser.close();
 });
 
 describe('search function', () => {
