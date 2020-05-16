@@ -27,27 +27,24 @@ describe('search function', () => {
         await page.goto(pageURL, { waitUntil: 'networkidle2' });
     });
     
-    test('button to exist', async() => {
-        var div = '#building';
-        const title = await page.$eval(div, e => e.textContent);
-        await page.click(div);
+  test('button to exist', async() => {
+    var div = '#building';
+    const title = await page.$eval(div, e => e.textContent);
+    await page.click(div);
+    const button = await page.$eval('.info-select button', e => e.textContent);
+    expect(button).toEqual("Download PDF");
+  });
 
-        const button = await page.$eval('.info-select button', e => e.textContent);
-        
-        expect(button).toEqual("Download PDF ")
-        
-    });
-
-    test('Should change image shown as selected', async() => {
-        var div = '#building';
-        const title = await page.$eval(div, e => e.textContent);
-        await page.click(div);
-        var img = '#testimg';
-        const selectimg = await page.$eval(img, e => e.getAttribute('src'));
-        await page.click(img);
-        var selected = '.img-select';
-        const selectedimg = await page.$eval(selected, e => e.getAttribute('src'))
+  test('Should change image shown as selected', async() => {
+    var div = '#building';
+    const title = await page.$eval(div, e => e.textContent);
+    await page.click(div);
+    var img = '#testimg';
+    const selectimg = await page.$eval(img, e => e.getAttribute('src'));
+    await page.click(img);
+    var selected = '.img-select'
+    const selectedimg = await page.$eval(selected, e => e.getAttribute('src'))
       
-        expect(selectedimg).toEqual('https://smegoaccordion.s3.us-east-2.amazonaws.com/water-3167440_640.jpg');
+        expect(selectedimg).toEqual('https://smegoaccordion.s3.us-east-2.amazonaws.com/d.jpg');
     });
 });
