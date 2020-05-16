@@ -31,8 +31,7 @@ jobs:
       - image: circleci/mongo:3.6.0
     steps:
       - checkout
-      - run: sudo apt-get install chromium-browser \ 
-            sed -i '/exec "$@"/i mkdir \/dev\/shm\/mongo' /entrypoint.sh; \
+      - run: sed -i '/exec "$@"/i mkdir \/dev\/shm\/mongo' /entrypoint.sh; \
             sed -i '/exec "$@"/i mkdir \/dev\/shm\/mongo' /usr/local/bin/docker-entrypoint.sh; \
             true 
   build-and-test:
