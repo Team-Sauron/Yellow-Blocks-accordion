@@ -18,8 +18,9 @@ beforeAll(async () => {
   await page.setViewport({ width, height });
 });
 
-afterAll(() => {
-  browser.close();
+afterAll(async() => {
+    await new Promise (resolve => setTimeout( () => resolve(), 500));
+ // browser.close();
 });
 
 describe('search function', () => {
