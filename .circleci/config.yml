@@ -5,6 +5,8 @@ jobs:
   build:
     docker:
       - image: circleci/node:12.16.1
+        environment:
+          NODE_ENV: development
       - image: circleci/mongo:3.6.0
     steps:
       - checkout
