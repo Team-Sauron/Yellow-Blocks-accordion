@@ -34,7 +34,7 @@ describe('search function', () => {
 
         const button = await page.$eval('.info-select button', e => e.textContent);
         
-        expect(button).toEqual("Download PDF ")
+        expect(button).toEqual("Download PDF")
         
     });
 

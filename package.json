@@ -9,8 +9,8 @@
     "build": "webpack --config webpack.config.js",
     "react-dev": "webpack -d --watch",
     "seed": "node ./data/db/base.js",
-    "test": "node test.js",
-    "test2": "jest --detectOpenHandles",
+    "test2": "node test.js",
+    "test": "jest --detectOpenHandles",
     "test2:watch": "jest --watch"
   },
   "repository": {
