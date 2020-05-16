@@ -1,4 +1,8 @@
 version: 2.1
+description: |
+  "Install puppeteer and headless chrome
+  Source: https://circleci.com/gh/threetreeslight/puppeteer-orb"
+
 commands:
   install:
     description: Install puppeteer and headless chrome
