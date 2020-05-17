@@ -25,14 +25,17 @@ class Accordion extends React.Component {
   componentDidMount() {
     const loc = window.location.href;
     let id = 1;
-    if (loc.indexOf('=') !== -1) {
-      id = loc.slice(loc.indexOf('=') + 1);
-    }
-    const they = this;
+    const query = url.slice(url.indexOf('?'));
+    const params = new URLSearchParams(query);
+    if (params.get('pid' !== null) {
+      id = params.get('pid');
+    })
+
+    const that = this;
     axios.get(`http://3.23.173.204:3004/api/accordion/${id}`)
       .then((response) => {
-        they.setState({ features: response.data.features });
-        they.setState({ cImg: response.data.features.item1.A });
+        that.setState({ features: response.data.features });
+        that.setState({ cImg: response.data.features.item1.A });
       })
       .catch((error) => {
         console.log(error);
