@@ -25,11 +25,11 @@ class Accordion extends React.Component {
   componentDidMount() {
     const loc = window.location.href;
     let id = 1;
-    const query = url.slice(url.indexOf('?'));
+    const query = loc.slice(loc.indexOf('?'));
     const params = new URLSearchParams(query);
-    if (params.get('pid' !== null) {
+    if (params.get('pid' !== null)) {
       id = params.get('pid');
-    })
+    }
 
     const that = this;
     axios.get(`http://3.23.173.204:3004/api/accordion/${id}`)
