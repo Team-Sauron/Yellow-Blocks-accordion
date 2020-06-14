@@ -2,7 +2,9 @@
 
 Smego
 
-> Project description
+> Item detail page
+> Accordion module: 
+Mock data representing at least 100 different products
 
 ## Related Projects
 
@@ -11,31 +13,21 @@ Smego
   - https://github.com/eam-Sauron/Smego-Carousel
   - https://github.com/eam-Sauron/smego-reviews-service
 
-## Table of Contents
+## Contents
 
-1. [Usage](#Usage)
-1. [Requirements](#requirements)
-1. [Development](#development)
+1. [Features: Show highlights of the selected product with images and videos related.]
+2. [Building instructions: Change style dynamically by clicking images or titles for selecting the desired document to download.]
+3. [Deliveries and returns: Information for that product's policy on deliveries and return.]
 
-## Usage
 
-> Some usage instructions
+## Technologies
 
-## Requirements
+- React
+- Express
+- Node
+- Webpack
+- Mongodb
+- Axios
+- Puppeteer
 
-An `nvmrc` file is included if using [nvm](https://github.com/creationix/nvm).
-
-- Node 6.13.0
-- etc
-
-## Development
-
-### Installing Dependencies
-
-From within the root directory:
-
-```sh
-npm install -g webpack
-npm install
-```
 
