@@ -6,7 +6,8 @@ Smego
 > Accordion module: 
 Mock data representing at least 100 different products
 
-<a href="https://imgflip.com/gif/454xg2">via Imgflip</a></p></div>
+![ezgif com-video-to-gif (7)](https://user-images.githubusercontent.com/61338620/84606211-ec774b80-ae71-11ea-8569-ad42f9a83dee.gif)
+
 
 
 ## Related Projects
