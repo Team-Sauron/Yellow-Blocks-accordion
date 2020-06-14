@@ -1,5 +1,5 @@
 # smego-accordion# 
-![]ezgif.com-video-to-gif (7).gif
+![Smego](ezgif.com-video-to-gif (7).gif)
 Smego
 
 > Item detail page
