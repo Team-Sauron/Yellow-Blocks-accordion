@@ -1,10 +1,13 @@
 # smego-accordion# 
-![Smego](ezgif.com-video-to-gif (7).gif)
+
 Smego
 
 > Item detail page
 > Accordion module: 
 Mock data representing at least 100 different products
+
+![Smego](ezgif.com-video-to-gif (7).gif)
+
 
 ## Related Projects
 
