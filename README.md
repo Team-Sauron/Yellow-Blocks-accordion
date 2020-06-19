@@ -1,6 +1,6 @@
-# smego-accordion# 
+# Yellow BLocks-Accordion# 
 
-Smego
+Yellow-Blocks
 
 > Item detail page
 > Accordion module: 
