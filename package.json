@@ -50,7 +50,7 @@
   "dependencies": {
     "@babel/preset-react": "^7.9.4",
     "aws-s3": "^2.0.5",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "compression": "^1.7.4",
     "eslint-config-airbnb": "^18.1.0",
     "express": "^4.17.1",
